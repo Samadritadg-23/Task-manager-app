@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/shortid@2.2.16/dist/shortid.min.js"></script>
+
+    
+
+</head>
+
+
+<body>
+    <nav>
+        <h1>Taskify</h1>
+        <p class="tagline" style="color: white;font-style: italic;font-size: 13px;">Organize • Focus • Achieve</p>
+    </nav>
+    <div class="main">
+        <div id="sidebar">
+            <div class="sidebar" id="addtask">
+                <i class="fa-solid fa-circle-plus"></i>
+                <h6>Add Task</h6>   
+            </div>
+            <div id="sidebar-priority">
+                <h4>FILTER  BY</h4>
+                <h5>priority</h5>
+                <div class="priority">
+                    <button class="priorities U" data-color="--urgent">Urgent</button>
+                    <button class="priorities H" data-color="--high">High</button>
+                    <button class="priorities M" data-color="--medium">Medium</button>
+                    <button class="priorities L" data-color="--low">Low</button>
+                    <br>
+                    <a href="#" class="showall" style="font-size: 13px;color: rgb(72, 72, 72);font-style: italic;">Show all</a>
+                </div>
+            </div>
+        </div>
+        <div id="mainbar">
+            <div class="tickets"></div>
+        </div>    
+    </div>
+    
+
+    
+    <div class="new-task">
+        <header>
+            Create New Task
+            <i class="fa-regular fa-circle-xmark" id="cross"></i>
+        </header>
+        <div class="new-task-body">
+            
+            <textarea class="new-task-body-text" placeholder="Write your task..."></textarea>
+            <div class="new-task-body-priority">
+                <h5>Select priority:</h5>
+                <div class="buttons">
+                    <button class="btn U" data-color="--urgent" >U</button>
+                    <button class="btn H" data-color="--high" >H</button>
+                    <button class="btn M" data-color="--medium" >M</button>
+                    <button class="btn L" data-color="--low">L</button>
+                </div>
+            </div>
+        </div>
+        <footer>Press <span style="margin: 0 10px 0 10px;background-color: white; color: #06557f;border-radius: 10px; letter-spacing: 2px; padding: 0 3px 0 3px;"> Enter </span> to create task</footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+</html>

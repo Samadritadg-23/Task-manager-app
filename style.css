@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+}   
+body {
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+    background-color: #ffffff;
+}
+
+/*NAVBAR*/
+
+nav {
+    width: 100%;
+    height: 90px;
+    background-color: var(--primary-navbg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px var(--shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+
+}
+.main{
+    display: flex;
+    margin-top: 90px;  
+    min-height: calc(100dvh - 90px);
+    align-items: stretch; 
+}
+
+nav>h1 {
+    color:var(--text-light);
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-style: normal;
+    padding-bottom: 5px;
+    
+}
+/*SIDEBAR*/
+#sidebar{
+    background-color: var(--text-light);
+    min-height: calc(100dvh - 90px);
+    height: auto;
+    width: 200px;
+    box-shadow: 0 2px 10px var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+#addtask{
+    height: 100px;
+    width: 140px;
+    background-color: var(--dark-blue) ;
+    border-radius: 5px;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 2.5px black;
+    
+}
+#addtask>h6{
+    padding: 4px;
+    font-size: 15px;   
+}
+#sidebar-priority{
+    height: 300px;
+    width: 150px;
+    margin: 40px 20px 40px 20px;
+    text-align: center;
+}
+#sidebar-priority>h4{
+    color: #06557f; 
+    font-family: cursive; 
+    font-size: 20px;
+    letter-spacing: 2px;
+    
+}
+#sidebar-priority>h5{
+    color: #06557f; 
+    font-style: italic; 
+    font-size: 19px;
+    margin: 0 0 10px 0;
+}
+.priorities{
+    height: 40px;
+    width: 100px;
+    border-radius: 40px;
+    border: none;
+    margin: 9px;
+    color: white;
+    font-size: 15px;
+    font-style: italic;
+}
+
+
+/*MAIN-BAR*/
+#mainbar{
+    
+    width:100%; 
+    min-height:calc(100dvh - 90px);
+    height: auto;   
+}
+
+/*TICKETS*/
+.tickets{
+    display: flex;
+    flex-wrap: wrap;
+}
+.demo-ticket{
+    height: 130px;
+    width:200px;
+    background-color: rgb(237, 243, 243);
+    margin: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 5px var(--light-shadow);
+    
+}
+.demo-ticket>header{
+    height: 10px;
+    width: 100%;
+    
+}
+.task-num-lock{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap:90px;
+    margin: 10px;  
+}
+.task-num-lock>.id{
+    color: #717374;
+    font-size: 12px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 700;
+    
+}
+
+.task-num-lock>.lock{
+    font-size: 12px;
+    position: relative;
+    color: #717374; 
+}
+.ticket-content{
+    margin: 10px;
+    height: 70px;
+    padding: 0 10px 0 10px;
+    font-style: italic;
+    color: #03344f;
+}
+.demo-ticket>footer>.dustbin{
+    position: relative;
+    bottom: 23px;
+    left:180px;
+    font-size: 10px;
+    color: #717374;
+}
+
+
+/*NEW-TASK POPUP*/
+.new-task{
+    background-color: var(--text-light);
+    height: 300px;
+    width: 450px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px var(--shadow);
+    overflow: hidden;
+    
+    
+}
+.new-task>header{
+    background-color: var(--dark-blue);
+    height: 60px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    font-style: italic;
+    position: relative;
+    
+
+
+}
+#cross {
+    position: absolute;
+    right: 10px;
+    top: 30%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+.new-task>.new-task-body{
+    height: 215px;
+    width: 100%;
+}
+.new-task-body-text{
+    background-color: white;
+    position: relative;
+    left: 20px;
+    top:15px;
+    height: 180px;
+    width: 250px;
+    border-radius: 30px; 
+    border: none;
+    outline: none;
+    padding: 20px;  
+    font-size: 18px; 
+    color: #06557f;
+    font-style: italic;
+    resize: none;
+}
+.new-task-body-priority{
+    background-color: #bbe1e9;
+    height: 210px;
+    width: 150px;
+    
+    
+}
+.new-task-body-priority>h5{
+    text-align: center;
+    padding: 10px;
+    color:#044365;
+    font-style: italic;
+}
+.new-task-body-priority>.buttons{
+    padding: 10px 30px 10px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap ;
+    gap:30px;
+}
+.btn{
+    height: 55px;
+    width: 30px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: 600;
+}
+
+
+.new-task-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.new-task>footer{
+    height: 25px;
+    background-color:var(--dark-blue) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+.U{
+    background-color: var(--urgent);
+    
+}
+.H{
+    background-color:var(--high) ;
+}
+.M{
+    background-color: var(--medium);
+}
+.L{
+    background-color:var(--low) ;
+}
+
+
+
+
+
+/*HOVER EFFECTS*/
+#addtask:hover{
+    background-color: #0a7b9e;
+    cursor: pointer;
+}
+.U:hover{
+    background-color: rgb(11, 9, 120);
+    cursor: pointer;
+    box-shadow: 0 0 4px rgb(254, 255, 224);
+    border: 2px rgb(213, 235, 236) solid;
+}
+.H:hover{
+    background-color:#08689b  ;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgb(254, 255, 224);
+    border: 2px rgb(213, 235, 236) solid;
+}
+.M:hover{
+    background-color: rgb(70, 152, 169);
+    cursor: pointer;
+    box-shadow: 0 0 5px rgb(254, 255, 224);
+    border: 1.7px rgb(213, 235, 236) solid;
+}
+.L:hover{
+    background-color:rgb(91, 205, 213)  ;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgb(254, 255, 224);
+    border: 1.7px rgb(213, 235, 236) solid;
+}
+.dustbin:hover{
+    cursor: pointer;
+}
+.lock:hover{
+    cursor: pointer;
+}
+.top-color:hover{
+    cursor: pointer;
+}
+
+
+
+/* CSS VARIABLES */
+:root {
+    --primary-navbg: #0792b8;
+    --text-light: #c7e7ee;
+    --shadow: rgb(180, 176, 176);
+    --dark-blue:#06557f;
+    --light-shadow:rgb(208, 205, 205);
+    --urgent:rgb(7, 6, 82);
+    --high:#065580 ;
+    --medium:rgb(62, 134, 149);
+    --low:rgb(83, 188, 195) ;
+}
